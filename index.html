@@ -48,7 +48,7 @@
             >
           </a>
           <div class="flex items-center lg:order-2">
-            <a href="#_" class="relative inline-block text-lg group">
+            <a href="#pricing" class="relative inline-block text-lg group smooth-scroll">
               <span
                 class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white"
               >
@@ -93,7 +93,7 @@
               200M monthly visitors to promote, sell and grow your product.
             </p>
             <div class="flex items-center justify-center w-full">
-              <a href="#_" class="relative inline-block text-lg group">
+              <a href="#pricing" class="relative inline-block text-lg group smooth-scroll">
                 <span
                   class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white"
                 >
@@ -292,7 +292,7 @@
         >
           <div class="w-full aspect-video">
             <img
-              class="w-full  object-contain mt-[-20px] h-full overflow-hidden"
+              class="w-full object-contain mt-[-20px] h-full overflow-hidden"
               src="./image 1.png"
               alt="User guide to get you started"
             />
@@ -323,7 +323,10 @@
 
     <!-- Start block -->
     <section class="bg-white dark:bg-gray-800">
-      <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-24 lg:px-6">
+      <div
+        class="max-w-screen-xl px-4 py-8 mx-auto lg:py-24 lg:px-6"
+        id="pricing"
+      >
         <div class="max-w-screen-md mx-auto mb-8 text-center lg:mb-12">
           <h2
             class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white"
@@ -876,8 +879,8 @@
       </div>
       <div class="mt-10">
         <a
-          href="#_"
-          class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-gray-900 rounded-lg hover:bg-gray-800 focus:shadow-outline focus:outline-none"
+          href="#pricing"
+          class="inline-flex smooth-scroll items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-gray-900 rounded-lg hover:bg-gray-800 focus:shadow-outline focus:outline-none"
         >
           Get database
         </a>
@@ -957,5 +960,19 @@
       >Powered by stackai.co</a
     >
     <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
+    <script>
+      // Smooth scroll on click
+      const links = document.querySelectorAll(".smooth-scroll");
+      links.forEach((link) => {
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          const href = link.getAttribute("href");
+          const target = document.querySelector(href);
+          target.scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
   </body>
 </html>
